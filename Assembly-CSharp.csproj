@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0CAF2772-DFCF-994F-D785-F1A18FE71344}</ProjectGuid>
+    <ProjectGuid>{BE67CA5E-06EA-A144-80F6-EAC91033F00A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,91 +59,95 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Framerwork\ObjectPool.cs" />
+     <Compile Include="Assets\Scripts\Framerwork\SafeArea.cs" />
      <Compile Include="Assets\Scripts\Framerwork\SingletonBase.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Runtime">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Path.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Triangle.Runtime">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="PsdPlugin">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Psdimporter.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Runtime">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Runtime">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/GRID AOR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.DeviceSimulator.Editor">
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.DeviceSimulator.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

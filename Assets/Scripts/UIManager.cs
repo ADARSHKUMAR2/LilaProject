@@ -14,8 +14,8 @@ public class UIManager : SingletonBase<UIManager>
         _menuPanel.gameObject.SetActive(!value);
     }
 
-    public void GenerateTile()
+    public void GenerateTile(int num)
     {
-        _gamePanel.GenerateTileData();
+        _gamePanel.GenerateTileData(num);
     }
 }
