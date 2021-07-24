@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private Text _tileNumberText;
-    [SerializeField] private Image _tileImage;
-
-    private int tileNum;
-
-    public void SetTileData(int num)
-    {
-        tileNum = num;
-        _tileNumberText.text = tileNum.ToString();
-    }
+    // [SerializeField] private Text _tileNumberText;
+    // [SerializeField] private Image _tileImage;
+    //
+    // private int tileNum;
+    //
+    // public void SetTileData(int num)
+    // {
+    //     tileNum = num;
+    //     _tileNumberText.text = tileNum.ToString();
+    // }
 }

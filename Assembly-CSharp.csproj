@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AdjustCamera.cs" />
      <Compile Include="Assets\Scripts\Framerwork\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Framerwork\SafeArea.cs" />
      <Compile Include="Assets\Scripts\Framerwork\SingletonBase.cs" />
