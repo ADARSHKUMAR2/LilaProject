@@ -24,7 +24,7 @@ public class MenuController : MonoBehaviour
     private void OnNextButtonClick()
     {
         UIManager.Instance.ShowGamePanel(true);
-        UIManager.Instance.GenerateTile(Int32.Parse(_numberOfTiles.text));
+        UIManager.Instance.SendMenuData(Int32.Parse(_numberOfTiles.text),Int32.Parse(_areaOfInterest.text));
     }
 
     private void OnDisable()

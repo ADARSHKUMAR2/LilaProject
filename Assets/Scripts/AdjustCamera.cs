@@ -9,7 +9,7 @@ public class AdjustCamera : MonoBehaviour
     public float cameraOffset;
     private float padding = 2f;
     private float aspectRatio = 0.625f;
-    private void Start()
+    /*private void Start()
     {
         // Debug.Log($"Screen width - {Screen.width} , Height - {Screen.height}");
         _gameController = FindObjectOfType<GameController>();
@@ -27,5 +27,5 @@ public class AdjustCamera : MonoBehaviour
             Camera.main.orthographicSize = (_gameController.xDim / 2 + padding) / aspectRatio;
         // else
         //     Camera.main.orthographicSize = _gameController.yDim / 2 + padding;
-    }
+    }*/
 }

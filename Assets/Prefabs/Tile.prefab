@@ -52,7 +52,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7568398946725236415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -231,3 +231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b4578c8d7824b3bb56811e5460f21a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tileNumberText: {fileID: 7568398946725236401}
+  _tileImage: {fileID: 7568398946768832191}
+  _colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.9914521, g: 1, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.046749115, a: 1}
+  - {r: 0, g: 0.99020815, b: 1, a: 1}
+  - {r: 0.8696041, g: 0, b: 1, a: 1}
+  _tileButton: {fileID: 7568398946768832188}

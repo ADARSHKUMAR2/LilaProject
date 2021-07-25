@@ -105,6 +105,9 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.DeviceSimulator.Editor">
+ <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.DeviceSimulator.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
@@ -146,9 +149,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.DeviceSimulator.Editor">
- <HintPath>/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Library/ScriptAssemblies/Unity.DeviceSimulator.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

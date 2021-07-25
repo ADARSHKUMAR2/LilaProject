@@ -1,4 +1,0 @@
-#Sat Jul 24 17:13:31 IST 2021
-base.0=/Volumes/WorkSpace/WorkSpace/Projects/LilaProject/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
