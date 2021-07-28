@@ -384,8 +384,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 2402400147475432125}
+        m_MethodName: OnToggleChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &464551688359628944
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunImage: {fileID: 104487323}
   _weaponName: {fileID: 576196339063882448}
+  _gunSelectedToggle: {fileID: 1541600823}
 --- !u!1 &6483339455280750730
 GameObject:
   m_ObjectHideFlags: 0

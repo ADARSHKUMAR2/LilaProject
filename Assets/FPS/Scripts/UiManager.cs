@@ -9,9 +9,14 @@ namespace FPS
     {
         [SerializeField] private WeaponSelectionScreen _weaponSelection;
 
-        public void CheckGunsLimit(WeaponType weaponType)
+        public void UpdateGunsCount(WeaponType weaponType,bool isSelected)
         {
-            _weaponSelection.CheckMaxGunsChosen(weaponType);
+            _weaponSelection.UpdateWeaponCount(weaponType,isSelected);
+        }
+
+        public bool CanChooseWeapon()
+        {
+            return _weaponSelection.CanSelectWeapon();
         }
     }
    

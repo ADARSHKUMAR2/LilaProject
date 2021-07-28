@@ -36,15 +36,20 @@ public class GunsUI : MonoBehaviour
 
     private void AddListeners()
     {
-        _gunSelectedToggle.onValueChanged.AddListener(delegate
-        {
-            OnToggleChanged(_gunSelectedToggle);
-        });
+        
     }
 
-    private void OnToggleChanged(Toggle toggle)
+    public void OnToggleChanged()
     {
-        UiManager.Instance.CheckGunsLimit(_weaponData.weaponType);
+        if (_gunSelectedToggle.isOn)
+        {
+            UiManager.Instance.UpdateGunsCount(_weaponData.weaponType, true);
+            if (!UiManager.Instance.CanChooseWeapon())
+                _gunSelectedToggle.isOn = false;
+        }
+        else
+            UiManager.Instance.UpdateGunsCount(_weaponData.weaponType,false);
+        
     }
 
     private void OnDisable()
@@ -55,10 +60,6 @@ public class GunsUI : MonoBehaviour
     private void RemoveListeners()
     {
         
-        _gunSelectedToggle.onValueChanged.RemoveListener(delegate
-        {
-            OnToggleChanged(_gunSelectedToggle);
-        });
     }
 
 }
