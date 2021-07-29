@@ -63,9 +63,11 @@
      <Compile Include="Assets\FPS\Scripts\UiManager.cs" />
      <Compile Include="Assets\FPS\Scripts\Weapon\GunSystem.cs" />
      <Compile Include="Assets\FPS\Scripts\Weapon\GunsUI.cs" />
+     <Compile Include="Assets\FPS\Scripts\Weapon\PlayerGunsView.cs" />
      <Compile Include="Assets\FPS\Scripts\Weapon\WeaponData.cs" />
      <Compile Include="Assets\FPS\Scripts\Weapon\WeaponHandler.cs" />
      <Compile Include="Assets\FPS\Scripts\Weapon\WeaponSelectionScreen.cs" />
+     <Compile Include="Assets\FPS\Scripts\Weapon\WeaponsInfo.cs" />
      <Compile Include="Assets\Framerwork\SafeArea.cs" />
      <Compile Include="Assets\Framerwork\SimplePooler.cs" />
      <Compile Include="Assets\Framerwork\SingletonBase.cs" />

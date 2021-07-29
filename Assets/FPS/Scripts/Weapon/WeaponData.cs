@@ -12,6 +12,7 @@ public enum WeaponType
 [CreateAssetMenu(fileName = "NewWeapon", menuName = "Weapon/NewWeapon")]
 public class WeaponData : ScriptableObject
 {
+    public int weaponId;
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae0e2f6a0bbc42fd81a18fdea626622, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
+  weaponId: 3
   damage: 20
   timeBetweenShooting: 5
   spread: 10

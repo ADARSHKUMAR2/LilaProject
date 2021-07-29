@@ -11,7 +11,7 @@ public class GunsUI : MonoBehaviour
     [SerializeField] private Text _weaponName;
     [SerializeField] private Toggle _gunSelectedToggle;
     private WeaponData _weaponData;
-    
+    public int weaponId { private set; get; }
     public void SetWeaponDetails(WeaponData weaponData)
     {
         _weaponData = weaponData;
@@ -22,6 +22,7 @@ public class GunsUI : MonoBehaviour
     {
         _gunImage = _weaponData.weaponImage;
         _weaponName.text = _weaponData.name;
+        weaponId = _weaponData.weaponId;
     }
     
     private void Start()
