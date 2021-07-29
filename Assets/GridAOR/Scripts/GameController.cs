@@ -100,6 +100,9 @@ public class GameController : MonoBehaviour
 
     private void OnBackClicked()
     {
+        foreach (var tile in allTiles)
+            tile.SetDefaultValues();
+        
         ClearData();
         tilesPool.ReturnAllToPool();
         UIManager.Instance.ShowGamePanel(false);

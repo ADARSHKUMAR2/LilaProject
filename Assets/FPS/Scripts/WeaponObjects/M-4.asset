@@ -17,7 +17,7 @@ MonoBehaviour:
   timeBetweenShooting: 0.1
   spread: 40
   range: 100
-  reloadTime: 2
+  reloadTime: 1
   timeBetweenShots: 0.3
   magazineSize: 40
   bulletsPerTap: 1

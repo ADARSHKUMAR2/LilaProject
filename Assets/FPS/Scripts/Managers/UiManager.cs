@@ -10,6 +10,7 @@ namespace FPS
     public class UiManager : SingletonBase<UiManager>
     {
         [SerializeField] private WeaponSelectionScreen _weaponSelection;
+        [SerializeField] private AlertPopup  _alertPopup;
         
         public List<int> userGunsId { private set; get; } //can use static also here
 
@@ -23,9 +24,9 @@ namespace FPS
             _weaponSelection.UpdateWeaponCount(weaponType,isSelected);
         }
 
-        public bool CanChooseWeapon()
+        public bool CanChooseWeapon(WeaponType weaponType)
         {
-            return _weaponSelection.CanSelectWeapon();
+            return _weaponSelection.CanSelectWeapon(weaponType);
         }
 
         public void OpenScene(int index)
@@ -38,6 +39,12 @@ namespace FPS
         public void SavePlayerGunsInfo(List<int> guns)
         {
             userGunsId = guns;
+        }
+
+        public void SetAlert(string heading,string body,Action OnClose= null)
+        {
+            _alertPopup.gameObject.SetActive(true);
+            _alertPopup.SetDetails(heading,body);
         }
     }
    

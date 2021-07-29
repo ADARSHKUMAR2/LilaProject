@@ -45,7 +45,7 @@ public class GunsUI : MonoBehaviour
         if (_gunSelectedToggle.isOn)
         {
             UiManager.Instance.UpdateGunsCount(_weaponData.weaponType, true);
-            if (!UiManager.Instance.CanChooseWeapon())
+            if (!UiManager.Instance.CanChooseWeapon(_weaponData.weaponType))
                 _gunSelectedToggle.isOn = false;
         }
         else

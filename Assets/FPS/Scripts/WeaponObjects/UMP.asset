@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponId: 5
   damage: 25
-  timeBetweenShooting: 3
+  timeBetweenShooting: 0.4
   spread: 40
   range: 100
-  reloadTime: 4
-  timeBetweenShots: 1
-  magazineSize: 40
+  reloadTime: 2
+  timeBetweenShots: 0.6
+  magazineSize: 30
   bulletsPerTap: 1
   weaponType: 0
   weapon: {fileID: 1294672646082164, guid: 8d43e76b346f2f8448846e9211629d15, type: 3}

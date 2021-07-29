@@ -41,7 +41,8 @@ public class WeaponSelectionScreen : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Select at-least 1 weapon");
+            UiManager.Instance.SetAlert("Error","Select at-least 1 weapon");
+            // Debug.Log($"Select at-least 1 weapon");
         }
     }
 
@@ -85,14 +86,24 @@ public class WeaponSelectionScreen : MonoBehaviour
         }
     }
 
-    public bool CanSelectWeapon()
+    public bool CanSelectWeapon(WeaponType weaponType)
     {
-        if (primaryGunsCount > maxPrimaryGuns)
+        if (weaponType == WeaponType.PRIMARY)
+            return CheckGunCount(primaryGunsCount,maxPrimaryGuns);
+        else
+            return CheckGunCount(secondaryGunsCount, maxSecondaryGuns);
+
+        return false;
+    }
+
+    private bool CheckGunCount(int count,int maxCount)
+    {
+        if (count > maxCount)
             return false;
         else
             return true;
     }
-    
+
     public void UpdateWeaponCount(WeaponType weaponType,bool isSelected)
     {
         if (weaponType == WeaponType.PRIMARY)
@@ -104,12 +115,17 @@ public class WeaponSelectionScreen : MonoBehaviour
             
             _primaryGunsText.text = $"Primary Guns - {primaryGunsCount}/{maxPrimaryGuns}";
         }
+        else
+        {
+            if (isSelected)
+                secondaryGunsCount++;
+            else
+                secondaryGunsCount--;
+            
+            _secondaryGunsText.text = $"Secondary Guns - {secondaryGunsCount}/{maxSecondaryGuns}";
+        }
         
-        // UpdateCount(WeaponType.PRIMARY,primaryGunsCount,maxPrimaryGuns,isSelected);
+       
     }
 
-    private void UpdateCount(WeaponType weaponType, int gunCount, int maxLimit, bool isSelected)
-    {
-        
-    }
 }

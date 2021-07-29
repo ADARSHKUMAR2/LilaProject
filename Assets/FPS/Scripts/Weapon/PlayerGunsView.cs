@@ -43,6 +43,7 @@ public class PlayerGunsView : MonoBehaviour
 
     private void ShowInHUD()
     {
+        Debug.Log($"{weapons.Count}");
         for (int i = 0; i < weapons.Count; i++)
         {
             playerGuns[i].interactable = true;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponId: 1
   damage: 25
-  timeBetweenShooting: 0.5
+  timeBetweenShooting: 0.2
   spread: 40
   range: 100
   reloadTime: 2.5

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,8 @@ namespace GridAOR
 
         [SerializeField] private MenuController _menuPanel;
         [SerializeField] private GameController _gamePanel;
-
+        [SerializeField] private AlertPopup  _alertPopup;
+        
         public void ShowGamePanel(bool value)
         {
             _gamePanel.gameObject.SetActive(value);
@@ -25,6 +27,12 @@ namespace GridAOR
         public void SelectedTileInfo(int row,int column)
         {
             _gamePanel.HighlightTiles(row,column);
+        }
+        
+        public void SetAlert(string heading,string body,Action OnClose= null)
+        {
+            _alertPopup.gameObject.SetActive(true);
+            _alertPopup.SetDetails(heading,body);
         }
     }
    

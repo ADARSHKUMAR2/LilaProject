@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponId: 3
   damage: 20
-  timeBetweenShooting: 5
+  timeBetweenShooting: 1
   spread: 10
   range: 40
   reloadTime: 3
-  timeBetweenShots: 2
+  timeBetweenShots: 0.5
   magazineSize: 20
   bulletsPerTap: 2
   weaponType: 1

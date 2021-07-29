@@ -24,6 +24,12 @@ public class MenuController : MonoBehaviour
 
     private void OnNextButtonClick()
     {
+        if (_numberOfTiles.text.Length == 0 || _areaOfInterest.text.Length == 0)
+        {
+            UIManager.Instance.SetAlert("Error","Please fill all the fields");
+            return;
+        }
+        
         UIManager.Instance.ShowGamePanel(true);
         UIManager.Instance.SendMenuData(Int32.Parse(_numberOfTiles.text),Int32.Parse(_areaOfInterest.text));
     }

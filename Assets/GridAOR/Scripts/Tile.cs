@@ -30,10 +30,12 @@ public class Tile : MonoBehaviour
         AddButtonListeners();
     }
 
+    /// <summary>
+    /// Change the color of selected and adjacent tiles based on AOI
+    /// First get AOI from game controller script
+    /// </summary>
     private void AddButtonListeners()
     {
-        // Change the color of selected and adjacent tiles based on AOI
-        // First get AOI from game controller script
         _tileButton.onClick.AddListener(SendSelectedTileInfo);
     }
 
@@ -48,6 +50,12 @@ public class Tile : MonoBehaviour
         var randomColor = Random.Range(0, _colors.Length);
         _tileImage.color = _colors[randomColor];
         _tileNumberText.enabled = true;
+    }
+
+    public void SetDefaultValues()
+    {
+        _tileImage.color = Color.white;
+        _tileNumberText.enabled = false;
     }
 
     private void OnDisable()
