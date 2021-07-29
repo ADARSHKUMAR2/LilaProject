@@ -35,7 +35,14 @@ public class WeaponSelectionScreen : MonoBehaviour
     private void OpenFPSScene()
     {
         PassSelectedWeapons();
-        UiManager.Instance.OpenScene(1);
+        if (selectedGunsId.Count > 0)
+        {
+            UiManager.Instance.OpenScene(1);   
+        }
+        else
+        {
+            Debug.Log($"Select at-least 1 weapon");
+        }
     }
 
     private void PassSelectedWeapons()

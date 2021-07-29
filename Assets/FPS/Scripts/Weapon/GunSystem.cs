@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GunSystem : MonoBehaviour
 {
@@ -9,13 +10,35 @@ public class GunSystem : MonoBehaviour
     private bool shooting, readyToShoot, reloading;
     
     // public Transform attackPoint;
-    // public RaycastHit rayHit;
-    
+    public RaycastHit rayHit;
+    [SerializeField] private Camera fpsCam;
+    [SerializeField] private Transform gunHolder;
+    [SerializeField] private LayerMask IgnoreLayer;
     private void Awake()
     {
+    }
+
+    public void SetWeaponData(WeaponData weaponData)
+    {
+        this.weaponData = weaponData;
         bulletsLeft = weaponData.magazineSize;
         readyToShoot = true;
+        SwitchGuns();
     }
+
+    private void SwitchGuns()  
+    {
+        for (int i = 0; i < gunHolder.childCount; i++)
+            gunHolder.GetChild(i).gameObject.SetActive(false);
+        
+        var gun = gunHolder.Find(weaponData.weapon.name);
+        if (gun)
+            gun.gameObject.SetActive(true);
+        
+        //Get the ammo amount previously fired
+        bulletsLeft = GunsManager.Instance.GetBulletsFired(weaponData);
+    }
+    
     private void Update()
     {
         MyInput();
@@ -25,16 +48,21 @@ public class GunSystem : MonoBehaviour
     
     private void MyInput()
     {
+        
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < weaponData.magazineSize && !reloading) 
+            Reload();
+
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        
         if (weaponData.weaponType == WeaponType.PRIMARY) 
             shooting = Input.GetKey(KeyCode.Mouse0);
         else 
             shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < weaponData.magazineSize && !reloading) 
-            Reload();
-
         //Shoot
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0){
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+        {
             bulletsShot = weaponData.bulletsPerTap;
             Shoot();
         }
@@ -42,6 +70,7 @@ public class GunSystem : MonoBehaviour
     
     private void Shoot()
     {
+        Debug.Log($"Shooting");
         readyToShoot = false;
 
         //Spread
@@ -52,13 +81,14 @@ public class GunSystem : MonoBehaviour
         // Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
 
         //RayCast
-        // if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
-        // {
-        //     Debug.Log(rayHit.collider.name);
-        //
-        //     if (rayHit.collider.CompareTag("Enemy"))
-        //         rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
-        // }
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, weaponData.range,
+        ~IgnoreLayer))
+        {
+            Debug.Log(rayHit.collider.name);
+        
+            // if (rayHit.collider.CompareTag("Enemy"))
+            //     rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
+        }
 
         //ShakeCamera
         // camShake.Shake(camShakeDuration, camShakeMagnitude);
@@ -70,10 +100,11 @@ public class GunSystem : MonoBehaviour
         bulletsLeft--;
         bulletsShot--;
 
+        GunsManager.Instance.UpdateBulletsShot(bulletsLeft,weaponData);
         Invoke("ResetShot", weaponData.timeBetweenShooting);
 
         if(bulletsShot > 0 && bulletsLeft > 0)
-            Invoke(nameof(Shoot), weaponData.timeBetweenShots);
+            Invoke("Shoot", weaponData.timeBetweenShots);
     }
     private void ResetShot()
     {
@@ -88,5 +119,6 @@ public class GunSystem : MonoBehaviour
     {
         bulletsLeft = weaponData.magazineSize;
         reloading = false;
+        GunsManager.Instance.UpdateBulletsShot(bulletsLeft,weaponData);
     }
 }

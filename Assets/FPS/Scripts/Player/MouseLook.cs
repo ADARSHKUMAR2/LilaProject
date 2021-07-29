@@ -60,17 +60,18 @@ namespace Adarsh.FPS
 
 	}
 
-    void LockAndUnlockCursor() {
-
-        if(Input.GetKeyDown(KeyCode.Escape)) {
-
-            if(Cursor.lockState == CursorLockMode.Locked) {
-
+    void LockAndUnlockCursor() 
+    {
+        if(Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            if(Cursor.lockState == CursorLockMode.Locked) 
+            {
+                Debug.Log($"None");
                 Cursor.lockState = CursorLockMode.None;
-
-
-            } else {
-
+            } 
+            else 
+            {
+                Debug.Log($"Locked");
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
 
